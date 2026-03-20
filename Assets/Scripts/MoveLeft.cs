@@ -26,4 +26,12 @@ public class MoveLeft : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Dash()
+    {
+        if (!playerController.gameOver)
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * speed * 2);
+        }
+    }
 }
